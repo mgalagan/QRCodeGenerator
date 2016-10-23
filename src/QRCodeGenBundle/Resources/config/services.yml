@@ -1,0 +1,9 @@
+services:
+    qr_code_gen.generator.provider.google:
+        class: QRCodeGenBundle\Generator\Provider\GoogleProvider
+        calls:
+            - [setClient, ['@guzzle.client']]
+    qr_code_gen.generator.qr:
+        class: QRCodeGenBundle\Generator\QRGenerator
+        calls:
+            - [setProvider, ['@qr_code_gen.generator.provider.google']]

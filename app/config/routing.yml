@@ -1,0 +1,8 @@
+qr_code_gen:
+    resource: "@QRCodeGenBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: "@QRCodeGenBundle/Controller/"
+    type:     annotation
